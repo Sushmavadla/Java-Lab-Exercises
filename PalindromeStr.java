@@ -1,37 +1,17 @@
 package junefirstweek;
 import java.util.Scanner;
-public class PalindromeStr {
+public class Palindrome {
 	public static void main(String[] args) {
-		
-		        Scanner sc = new Scanner(System.in);
-
-		        // Prompt user to enter a string
-		        System.out.print("Enter a string: ");
-		        String input = sc.nextLine();
-
-		        // Check if the string is a palindrome
-		        boolean isPalindrome = checkPalindrome(input);
-
-		        // Display the result
-		        if (isPalindrome) {
-		            System.out.println("The string is a palindrome.");
-		        } else {
-		            System.out.println("The string is not a palindrome.");
-		        }
-		    }
-
-		    public static boolean checkPalindrome(String str) {
-		        int left = 0;
-		        int right = str.length() - 1;
-
-		        while (left < right) {
-		            // Compare characters from both ends
-		            if (str.charAt(left) != str.charAt(right)) {
-		                return false;
-		            }
-		            left++;
-		            right--;
-		        }
-		        return true;
+		String original, reverse = ""; // Objects of String class  
+      Scanner in = new Scanner(System.in);   
+      System.out.println("Enter a string/number to check if it is a palindrome");  
+      original = in.nextLine();   
+      int length = original.length();   
+      for ( int i = length - 1; i >= 0; i-- )  
+         reverse = reverse + original.charAt(i);  
+      if (original.equals(reverse))  
+         System.out.println("Entered string/number is a palindrome.");  
+      else  
+         System.out.println("Entered string/number isn't a palindrome.");        
 		    }
 }
