@@ -1,6 +1,6 @@
 package junefirstweek;
 import java.util.Scanner;
-public class Palindrome {
+public class PalindromeStr {
 	public static void main(String[] args) {
 		String original, reverse = ""; // Objects of String class  
       Scanner in = new Scanner(System.in);   
